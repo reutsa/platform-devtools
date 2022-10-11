@@ -1,0 +1,63 @@
+.MenuItem {
+  display: inline-grid;
+  grid-template-columns: 20px min-content;
+  white-space: nowrap;
+  color: white;
+  padding: 10px 2px 10px 2px;
+  align-items: center;
+}
+
+.MenuItem:hover {
+  background-color: #5b6374;
+}
+
+.MenuItem:active {
+  background-color: #9ba1b6;
+}
+
+.Item {
+  position: relative;
+  font-size: 14px;
+  grid-column: 2 / 3;
+}
+
+.Branch-icon {
+  grid-column: 1/ 2;
+  height: 16px;
+  pointer-events: none;
+}
+
+/* Tooltip text */
+.tooltip {
+  visibility: hidden;
+  font-size: 12px;
+  width: 55px;
+  background-color: #9ba1b6;
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: 110%;
+}
+
+.tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #9ba1b6 transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip.show {
+  visibility: visible;
+}
+
