@@ -1,7 +1,13 @@
 {
-  "manifest_version": 3,
   "name": "Platform Devtools",
+  "manifest_version": 3,
   "description": "A chrome extension containing tools for platform developers",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://meliorisk.atlassian.net/*"
+  ],
   "options_page": "options.html",
   "background": { "service_worker": "background.bundle.js" },
   "action": {
@@ -21,7 +27,6 @@
       "css": ["content.styles.css"]
     }
   ],
-  "devtools_page": "devtools.html",
   "web_accessible_resources": [
     {
       "resources": ["content.styles.css", "icon-128.png", "icon-34.png"],
