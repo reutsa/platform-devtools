@@ -31,12 +31,14 @@ class MenuItemComponent extends Component {
                     (results) => {
                         if (results && results.length > 0) {
                             const branchName = results[0].result
-                            navigator.clipboard.writeText(branchName);
-                            const tooltipElement = document.getElementById("tooltip");
-                            tooltipElement.classList.add("show");
-                            setTimeout(function () {
-                                tooltipElement.classList.remove("show");
-                            }, 1000);
+                            if (branchName) {
+                                navigator.clipboard.writeText(branchName);
+                                const tooltipElement = document.getElementById("tooltip");
+                                tooltipElement.classList.add("show");
+                                setTimeout(function () {
+                                    tooltipElement.classList.remove("show");
+                                }, 1000);
+                            }
                         }
                     }
                 );
