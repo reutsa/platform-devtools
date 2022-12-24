@@ -1,6 +1,7 @@
 {
   "name": "Platform Devtools",
   "manifest_version": 3,
+  "version": "0.0.1",
   "description": "A chrome extension containing tools for platform developers",
   "permissions": [
     "scripting"

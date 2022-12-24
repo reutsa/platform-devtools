@@ -5,6 +5,11 @@
   color: white;
   padding: 10px 2px 10px 2px;
   align-items: center;
+  cursor: pointer
+}
+
+.MenuItem.disabled {
+  cursor: not-allowed
 }
 
 .MenuItem:hover {
