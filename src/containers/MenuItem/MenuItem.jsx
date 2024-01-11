@@ -8,14 +8,14 @@ function taskToBranchName() {
         .join('-')
         .toLowerCase();
 
-    const issueId = document.querySelector('[data-test-id*="current-issue"]').innerText;
-    const title = document.querySelector('[data-test-id*="summary"]').innerText;
+    const issueElement = document.querySelector('[data-testid*="current-issue"]');
+    const titleElement = document.querySelector('[data-testid*="summary"]');
 
-    if (!issueId || !title) {
+    if (!issueElement || !titleElement) {
         return "no title"
     }
 
-    return `${issueId}-${toKebabCase(title)}`
+    return `${issueElement.innerText}-${toKebabCase(titleElement.innerText)}`
 }
 
 class MenuItemComponent extends Component {
